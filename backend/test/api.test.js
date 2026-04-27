@@ -28,8 +28,8 @@ describe('Pokémon API Routes', () => {
     expect(res.text).to.equal('Squirtle - Power: Water Gun');
   });
 
-  it('GET /mewtwo', async () => {
-    const res = await request(app).get('/mewtwo');
+  it('GET /sesd', async () => {
+    const res = await request(app).get('/sesd');
     expect(res.status).to.equal(200);
     expect(res.text).to.equal('Mewtwo - Power: Psychic');
   });
