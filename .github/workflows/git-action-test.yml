@@ -1,0 +1,29 @@
+name: Git Action Test Automation
+on:
+    push:
+        branches: [main]
+
+jobs:
+    node-setup-job:
+      runs-on: ubuntu-latest
+
+
+      defaults: 
+        run:
+          working-directory : backend
+
+
+      steps:
+          - name: Checkout Repo
+            uses: actions/checkout@v4
+
+
+          - name: Initialize Node
+            uses: actions/setup-node@v4
+          
+
+          - name: Install Node
+            uses: npm install
+
+          - name: Backend Test
+            uses: npm test
