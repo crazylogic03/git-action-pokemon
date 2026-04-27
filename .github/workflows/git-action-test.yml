@@ -27,3 +27,7 @@ jobs:
 
           - name: Backend Test
             uses: npm test
+
+
+          - name: Run npm build
+            uses: npm run build
